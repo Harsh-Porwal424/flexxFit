@@ -4,14 +4,14 @@ import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HScrlB from "./HScrlB";
 
-const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
-  const [search, setSearch] = useState("");
+const SrchE = ({setExercises, bodyPart, setBodyPart}) => {
+  const [srch, setSearch] = useState("");
 
 
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
-    const fetchExercisesData = async () => {
+    const fExcD = async () => {
       const bodyPartsData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
@@ -20,13 +20,13 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
       setBodyParts(["all", ...bodyPartsData]);
     };
 
-    fetchExercisesData();
+    fExcD();
 
-    console.log(fetchExercisesData());
+    console.log(fExcD());
   }, []);
 
   const handleSearch = async () => {
-    if (search) {
+    if (srch) {
       const exercisesData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
@@ -34,10 +34,10 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
 
       const searchedExercises = exercisesData.filter(
         (exercise) =>
-          exercise.name.toLowerCase().includes(search) ||
-          exercise.target.toLowerCase().includes(search) ||
-          exercise.equipment.toLowerCase().includes(search) ||
-          exercise.bodyPart.toLowerCase().includes(search)
+          exercise.name.toLowerCase().includes(srch) ||
+          exercise.target.toLowerCase().includes(srch) ||
+          exercise.equipment.toLowerCase().includes(srch) ||
+          exercise.bodyPart.toLowerCase().includes(srch)
       );
 
       setSearch("");
@@ -70,7 +70,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
             borderRadius: "40px",
           }}
           height="76px"
-          value={search}
+          value={srch}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search Exercises"
           type="text"
@@ -114,4 +114,4 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
   );
 };
 
-export default SearchExercises;
+export default SrchE;
