@@ -3,9 +3,8 @@ import { Box, Stack, Typography, Button } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 import sample from "../assets/vdio.mp4";
 
-import HeroBannerImage from "../assets/images/banner.png";
 
-const HeroBanner = () => {
+const Hero = () => {
   return (
     <Box sx={{ flexDirection: "row" }}>
       <Box
@@ -95,4 +94,4 @@ const HeroBanner = () => {
   );
 };
 
-export default HeroBanner;
+export default Hero;
