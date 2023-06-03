@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Box } from '@mui/material';
-import HeroBanner from '../components/HeroBanner';
+import Hero from '../components/Hero';
 import SrchE from '../components/SrchE';
 import Exercises from '../components/Exercises';
 
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     
     <Box>
-        <HeroBanner/>
+        <Hero/>
         <SrchE
             setExercises={setExercises}
             bodyPart={bodyPart}

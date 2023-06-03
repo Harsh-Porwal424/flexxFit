@@ -3,9 +3,9 @@ import { Box, Stack, Typography, Button } from '@mui/material'
 
 
 
-const ExerciseVideos = ({exerciseVideos, name}) => {
+const ExcVdio = ({exerciseVideos, name}) => {
 
-  console.log(exerciseVideos);
+  //console.log(exerciseVideos);
 
   if(!exerciseVideos.length) return 'Loading..';
 
@@ -64,4 +64,4 @@ const ExerciseVideos = ({exerciseVideos, name}) => {
   )
 }
 
-export default ExerciseVideos
+export default ExcVdio

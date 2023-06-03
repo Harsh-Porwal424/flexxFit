@@ -12,6 +12,7 @@ const Footer = () => (
     }}
   >
     <Stack
+      direction="row" // Modified
       gap="40px"
       sx={{ alignItems: 'center', display: 'flex', justifyContent: 'center' }}
       flexWrap="wrap"
