@@ -37,7 +37,7 @@ const Footer = () => (
       </Box>
       <Box
         component={Link}
-        href="/body-transformation"
+        href="https://image-difference-teamnull.netlify.app/"
         color="inherit"
         underline="none"
         target="_blank"
