@@ -2,11 +2,22 @@ import React from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
 import sample from "../assets/vdio.mp4";
+import backgroundImage from '../assets/images/bag.jpg';
 
+
+const styles = {
+  boxContainer: {
+    background: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    width: '100%',
+    height: '300px', // Set the desired height
+  },
+};
 
 const Hero = () => {
   return (
-    <Box sx={{ flexDirection: "row" }}>
+    <Box>
       <Box
         sx={{
           width: "50%",
@@ -95,5 +106,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
