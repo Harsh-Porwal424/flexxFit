@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 import { exerciseOptions, fetchData, youtubeOptions } from '../utils/fetchData';
 import Detail from '../components/Detail';
-import ExerciseVideos from '../components/ExerciseVideos';
+import ExcVdio from '../components/ExcVdio';
 // import SimilarExercises from '../components/SimilarExercises';
 
 const ExerciseDetail = () => {
@@ -42,7 +42,7 @@ const ExerciseDetail = () => {
   return (
     <Box sx={{ mt: { lg: '96px', xs: '60px' } }}>
       <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
+      <ExcVdio exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
     </Box>
   );
 };
